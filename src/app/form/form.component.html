@@ -1,0 +1,55 @@
+<h1>
+  Fill the form details:-
+</h1>
+
+
+<br>
+
+<div class="col-md-4">
+  <form (ngSubmit)="userInfo(f)" method="POST" #f="ngForm">
+
+    <div class="form-group">
+      <label>Serial Number</label>
+      <input name="serial" #serial="ngModel" ngModel type="number" class="form-control" id="serial" placeholder="Enter serial number">
+    </div>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #name="ngModel" ngModel name="name" class="form-control" id="name"
+        placeholder="Enter full name">
+    </div>
+
+    <div class="form-group">
+      <label>Age</label>
+      <input name="age" #age="ngModel" ngModel type="number" class="form-control" id="age" placeholder="Enter age">
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+      <input type="text" #department="ngModel" ngModel name="department" class="form-control" id="department"
+        placeholder="Enter department">
+    </div>
+
+    <div class="form-group">
+      <label>Blood group</label>
+      <input name="bloodGrp" #bloodGrp="ngModel" ngModel type="text" class="form-control" id="bloodgrp"
+        placeholder="Enter your blood group">
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <input name="address" #address="ngModel" ngModel type="text" class="form-control" id="address"
+        placeholder="Enter address">
+    </div>
+
+    <div class="form-group">
+      <label>Phone number</label>
+      <input type="text" #phoneNumber="ngModel" ngModel name="phoneNumber" class="form-control" id="phonenumber"
+        placeholder="Enter phone number">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <a [routerLink]="['/']"><button type="submit" class="btn btn-default">Go home</button></a>
+  </form>
+</div>

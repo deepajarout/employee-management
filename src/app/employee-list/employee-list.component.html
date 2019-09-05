@@ -1,0 +1,42 @@
+<h1>
+  Employee list
+</h1>
+
+<br>
+
+<div class="col-md-6">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Serial No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Department</th>
+        <th scope="col">Blood group</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone number</th>
+        <th>Edit employee details</th>
+        <th>Delete employee details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.serial}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.department}}</td>
+        <td>{{emp.bloodGrp}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.phoneNumber}}</td>
+
+        <td><button class="btn btn-primary" (click)="editEmployeeDetails(emp.serial)" type="button">Edit</button></td>
+
+
+        <td><button class="btn btn-danger" (click)="deleteEmployeeDetails(emp.serial)" type="button">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a [routerLink]="['/']"><button class="btn btn-default" type="button">Go home</button></a>
+</div>

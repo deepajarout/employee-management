@@ -1,0 +1,55 @@
+<h1>
+  Edit the form details:-
+</h1>
+
+
+<br>
+
+<div class="col-md-4">
+  <form (ngSubmit)="userUpdateInfo(f)" method="POST" #f="ngForm">
+
+    <div class="form-group">
+      <label>Serial Number</label>
+      <input name="serial" #serial="ngModel" ngModel type="number" class="form-control" id="serial" placeholder="Enter serial number"         [(ngModel)]="details.serial">
+    </div>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #name="ngModel" ngModel name="name" class="form-control" id="name" [(ngModel)]="details.name"
+        placeholder="Enter full name">
+    </div>
+
+    <div class="form-group">
+      <label>Age</label>
+      <input name="age" #age="ngModel" ngModel type="number" class="form-control" id="age" placeholder="Enter age" [(ngModel)]="details.age">
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+      <input type="text" #department="ngModel" ngModel name="department" class="form-control" id="department" [(ngModel)]="details.department"
+        placeholder="Enter department">
+    </div>
+
+    <div class="form-group">
+      <label>Blood group</label>
+      <input name="bloodGrp" #bloodGrp="ngModel" ngModel type="text" class="form-control" id="bloodgrp" [(ngModel)]="details.bloodGrp"
+        placeholder="Enter your blood group">
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <input name="address" #address="ngModel" ngModel type="text" class="form-control" id="address" [(ngModel)]="details.address"
+        placeholder="Enter address">
+    </div>
+
+    <div class="form-group">
+      <label>Phone number</label>
+      <input type="text" #phoneNumber="ngModel" ngModel name="phoneNumber" class="form-control" id="phonenumber" [(ngModel)]="details.phoneNumber"
+        placeholder="Enter phone number">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
